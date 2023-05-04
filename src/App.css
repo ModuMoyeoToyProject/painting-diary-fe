@@ -28,6 +28,7 @@ body{
   background-color:#bf21b4;
   margin-left: 42px;
   margin-top: 30px;
+  position: relative;
 }
 .login{
   width: 100%;
@@ -77,8 +78,10 @@ filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104
   color:#ffffff;
   font-weight: bold;
   font-size: 20px;
-  display: inline-block;
-  margin-top: 60px;
+  display: block;
+  position: relative;
+  margin-top: -99px;
+  margin-left: 38px;
 }
 
 

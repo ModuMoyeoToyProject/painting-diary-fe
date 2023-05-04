@@ -6,8 +6,9 @@ const Header = () => {
         <div className="header">
             <div className="moon">
                 <div className="small-moon">
-                    <Data/>
+                    
                 </div>
+                <Data/>
                 
             </div>
             <div className="login">
