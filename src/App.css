@@ -2,16 +2,16 @@
   text-align: center;
 }
 
-body{
+body {
   background-image: url(../public/img/배경.png);
   height: 100vh;
 }
 
-.header{
+.header {
   width: 100%;
 }
 
-.moon{
+.moon {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -21,61 +21,67 @@ body{
   position: absolute;
 }
 
-.small-moon{
+.small-moon {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background-color:#bf21b4;
+  background-color: #bf21b4;
   margin-left: 42px;
   margin-top: 30px;
   position: relative;
 }
-.login{
+.login {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
 }
 
-
-.log{
+.log {
   margin-top: 15px;
   width: 50px;
   display: flex;
   flex-direction: row-reverse;
   margin-right: 15px;
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104%) contrast(98%);
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg)
+    brightness(104%) contrast(98%);
 }
 
-.write{
- width: 80px;
- position: fixed;
- bottom: 10px;
- display: inline-block;
- margin-left: 550px;
-filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104%) contrast(98%);
+.write {
+  width: 80px;
+  position: fixed;
+  bottom: 10px;
+  display: inline-block;
+  margin-left: 550px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg)
+    brightness(104%) contrast(98%);
+  right: 110px;
 }
 
-.write:hover{
-  filter: invert(83%) sepia(68%) saturate(1603%) hue-rotate(327deg) brightness(102%) contrast(103%);
+.write:hover {
+  filter: invert(83%) sepia(68%) saturate(1603%) hue-rotate(327deg)
+    brightness(102%) contrast(103%);
   cursor: pointer;
 }
 
-.read{
+.read {
   display: inline-block;
   width: 80px;
   position: fixed;
   bottom: 10px;
-  margin-left:650px;
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104%) contrast(98%);
+  margin-left: 650px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg)
+    brightness(104%) contrast(98%);
+  right: 10px;
 }
 
-.read:hover{
-  filter: invert(83%) sepia(68%) saturate(1603%) hue-rotate(327deg) brightness(102%) contrast(103%);
+.read:hover {
+  filter: invert(83%) sepia(68%) saturate(1603%) hue-rotate(327deg)
+    brightness(102%) contrast(103%);
   cursor: pointer;
 }
 
-.date{
-  color:#ffffff;
+.date {
+  color: #ffffff;
   font-weight: bold;
   font-size: 20px;
   display: block;
@@ -83,8 +89,6 @@ filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104
   margin-top: -99px;
   margin-left: 38px;
 }
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -103,8 +107,6 @@ filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104
   color: white;
 }
 
-
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -112,4 +114,22 @@ filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104
   to {
     transform: rotate(360deg);
   }
+}
+
+.write_div {
+  width: 669px;
+  height: 600px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #fff;
+  padding: 34px 34px 44px 115px;
+  z-index: 99;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.exit_div {
+  display: flex;
+  flex-direction: row-reverse;
 }
