@@ -25,6 +25,8 @@ const Write = (props) => {
     return todayYear() + "년 " + todayMonth() + "월 " + todayDay() + "일";
   };
 
+  const manuscript = new Array(4).fill(new Array(10).fill(""));
+
   return (
     <div className="write_div">
       <div className="exit_div">
@@ -67,7 +69,7 @@ const Write = (props) => {
             <div className="input_title">월</div>
             <div>
               <input
-                className="write_year"
+                className="write_month"
                 type="text"
                 placeholder={todayMonth()}
               />
@@ -77,12 +79,26 @@ const Write = (props) => {
             <div className="input_title">일</div>
             <div>
               <input
-                className="write_year"
+                className="write_month"
                 type="text"
                 placeholder={todayDay()}
               />
             </div>
           </div>
+        </div>
+        <div className="input_title">장소</div>
+        <div>
+          <input className="write_title write_location" type="text" />
+        </div>
+        <div className="input_title">내용</div>
+        <div className="write_diary">
+          {manuscript.map((row, r) => (
+            <div>
+              {row.map((col, c) => (
+                <input className="write_manuscript" type="text" />
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>

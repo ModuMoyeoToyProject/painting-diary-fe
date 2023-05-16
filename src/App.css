@@ -1,5 +1,11 @@
-.App {
-  text-align: center;
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
 
 body {
@@ -39,11 +45,13 @@ body {
 .log {
   margin-top: 15px;
   width: 50px;
-  display: flex;
-  flex-direction: row-reverse;
-  margin-right: 15px;
+  /* display: flex; */
+  /* flex-direction: row-reverse; */
+  /* margin-right: 15px; */
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg)
     brightness(104%) contrast(98%);
+  position: fixed;
+  right: 15px;
 }
 
 .write {
@@ -132,4 +140,47 @@ body {
 .exit_div {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.write_content {
+  padding-right: 73px;
+}
+
+.write_content .input_title {
+  font-weight: bold;
+  font-size: 24px;
+  color: black;
+}
+
+.write_content input {
+  border: 2px solid #000;
+  padding: 17px 16px;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.write_content .write_title {
+  width: calc(100% - 42px);
+}
+
+.write_content .input_date {
+  display: flex;
+}
+
+.write_content .input_date .write_year {
+  width: 132px;
+  margin-right: 15px;
+}
+
+.write_content .input_date .write_month {
+  width: 70px;
+  margin-right: 15px;
+}
+
+.write_content .write_diary .write_manuscript {
+  width: 23px;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: 1px solid #000;
 }
