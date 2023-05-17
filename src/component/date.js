@@ -8,7 +8,7 @@ const Sidebar = () => {
         const week = ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'];
         let dayOfWeek = week[now.getDay()];
 
-      return todayMonth + '월' + todayDate+'일'+"     "+dayOfWeek 
+      return todayMonth + '월' + todayDate+'일'+"    "+dayOfWeek
 
     }
 
