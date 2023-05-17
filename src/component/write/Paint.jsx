@@ -6,6 +6,17 @@ const Paint = (props) => {
     setIsWrite(false);
   };
 
+  const toComplete = () => {
+    setPaint(2);
+  };
+
+  const paint_content = [
+    { src: require("../../image/paint_example_1.png"), selected: false },
+    { src: require("../../image/paint_example_2.png"), selected: false },
+    { src: require("../../image/paint_example_3.png"), selected: false },
+    { src: require("../../image/paint_example_4.png"), selected: false },
+  ];
+
   return (
     <div className="write_div">
       <div className="exit_div">
@@ -23,6 +34,41 @@ const Paint = (props) => {
             />
           </svg>
         </div>
+      </div>
+      <div className="paint_content">
+        <div className="keyword_div">
+          <div className="keyword">
+            <input
+              className="keyword_input"
+              type="text"
+              value={"#놀이공원#맑음#롤러코스터"}
+            />
+          </div>
+          <div className="new_paint">
+            <svg
+              width="52"
+              height="52"
+              viewBox="0 0 52 52"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26 43.3334C21.1611 43.3334 17.0625 41.6542 13.7042 38.2959C10.3459 34.9376 8.66669 30.839 8.66669 26.0001C8.66669 21.1612 10.3459 17.0626 13.7042 13.7042C17.0625 10.3459 21.1611 8.66675 26 8.66675C28.4917 8.66675 30.875 9.18097 33.15 10.2094C35.425 11.2379 37.375 12.7097 39 14.6251V8.66675H43.3334V23.8334H28.1667V19.5001H37.2667C36.1111 17.4779 34.5309 15.889 32.526 14.7334C30.5211 13.5779 28.3458 13.0001 26 13.0001C22.3889 13.0001 19.3195 14.264 16.7917 16.7917C14.2639 19.3195 13 22.389 13 26.0001C13 29.6112 14.2639 32.6806 16.7917 35.2084C19.3195 37.7362 22.3889 39.0001 26 39.0001C28.7806 39.0001 31.2903 38.2056 33.5292 36.6167C35.7681 35.0279 37.3389 32.9334 38.2417 30.3334H42.7917C41.7806 34.1612 39.7222 37.2848 36.6167 39.7043C33.5111 42.1237 29.9722 43.3334 26 43.3334Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+        </div>
+        <div className="paints">
+          {paint_content.map((paint) => (
+            <div className={paint.selected ? "paint selected" : "paint"}>
+              <img src={paint.src} />
+            </div>
+          ))}
+        </div>
+        <button className="to_complete" onClick={toComplete}>
+          저장하기
+        </button>
       </div>
     </div>
   );

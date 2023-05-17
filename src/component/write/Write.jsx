@@ -6,6 +6,10 @@ const Write = (props) => {
     setIsWrite(false);
   };
 
+  const toPaint = () => {
+    setPaint(1);
+  };
+
   const todayYear = () => {
     const now = new Date(); // 현재 날짜 및 시간
     return now.getFullYear();
@@ -25,7 +29,7 @@ const Write = (props) => {
     return todayYear() + "년 " + todayMonth() + "월 " + todayDay() + "일";
   };
 
-  const manuscript = new Array(4).fill(new Array(10).fill(""));
+  const manuscript = new Array(4).fill(new Array(8).fill(""));
 
   return (
     <div className="write_div">
@@ -100,6 +104,9 @@ const Write = (props) => {
             </div>
           ))}
         </div>
+        <button className="to_paint" onClick={toPaint}>
+          그리기
+        </button>
       </div>
     </div>
   );
