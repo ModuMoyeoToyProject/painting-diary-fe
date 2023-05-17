@@ -16,12 +16,8 @@ const Sidebar = () => {
     ];
     let dayOfWeek = week[now.getDay()];
 
-<<<<<<< HEAD
-      return todayMonth + '월' + todayDate+'일'+"    "+dayOfWeek
-=======
     return todayMonth + "월" + todayDate + "일" + dayOfWeek;
   };
->>>>>>> d4226bb782f3934a88d937b4abcc0078c0fdb4ed
 
   return (
     <div className="date">

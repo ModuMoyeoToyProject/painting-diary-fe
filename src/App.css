@@ -36,76 +36,71 @@ body {
   margin-top: 30px;
   position: relative;
 }
-<<<<<<< HEAD
-
-.logout{
-=======
 .login {
->>>>>>> d4226bb782f3934a88d937b4abcc0078c0fdb4ed
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
 }
 
-<<<<<<< HEAD
-.modal{
-  display:inline-block;
+.logout {
+}
+.modal {
+  display: inline-block;
   margin-left: 1335px;
   margin-top: -95px;
   position: relative;
 }
 
-.logout_img{
+.logout_img {
   width: 200px;
   margin-top: 50px;
   display: block;
 }
 
-
-.log{
+.log {
   margin-top: 15px;
   width: 50px;
   display: inline-flex;
   flex-direction: row-reverse;
   margin-right: 65px;
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104%) contrast(98%);
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg)
+    brightness(104%) contrast(98%);
 }
 
-.log:hover{
+.log:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-.logout_text{
-    margin-top: 30px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: bold;
+.logout_text {
+  margin-top: 30px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
 }
 
-.lg_set{
+.lg_set {
   text-decoration: underline;
   margin-bottom: 5px;
 }
 
-.lg a{
+.lg a {
   text-decoration: none;
   color: black;
 }
 
-
-
-.write{
- width: 80px;
- position: fixed;
- bottom: 10px;
- display: inline-block;
- margin-left: 550px;
-filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104%) contrast(98%);
-=======
+.write {
+  width: 80px;
+  position: fixed;
+  bottom: 10px;
+  display: inline-block;
+  margin-left: 550px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg)
+    brightness(104%) contrast(98%);
+}
 .log {
   margin-top: 15px;
   width: 50px;
@@ -127,7 +122,6 @@ filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg) brightness(104
   filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(253deg)
     brightness(104%) contrast(98%);
   right: 110px;
->>>>>>> d4226bb782f3934a88d937b4abcc0078c0fdb4ed
 }
 
 .write:hover {
