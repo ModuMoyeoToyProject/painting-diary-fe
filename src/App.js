@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Footer setIsWrite={setIsWrite} />
+      <Footer setIsWrite={setIsWrite}/>
       {isWrite && <WriteComponent setIsWrite={setIsWrite} />}
     </div>
   );

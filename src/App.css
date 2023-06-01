@@ -46,8 +46,8 @@ body {
 }
 .modal {
   display: inline-block;
-  margin-left: 1335px;
-  margin-top: -95px;
+  margin-left: 0px;
+  margin-top: 0px;
   position: relative;
 }
 
