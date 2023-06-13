@@ -121,13 +121,13 @@
   }
   /* START section id values */
   #show_titles {
-    display: none;
+    display: block;
   }
   #show_pictures {
     display: block;
   }
   #show_calendar {
-    display: none;
+    display: block;
   }
   /* END section id values */
   

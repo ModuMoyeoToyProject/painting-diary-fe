@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../../../assets/css/modal.css';
 
 const Picture = (props) => {
-  const { open, close, header } = props;
+
+  const {count} = props;
 
   return(
-    <div id='show_titles'>
+    <div id='show_pictures'>
+      
       <button>
-      <div>
-        <text className='titleTxt'>그림1</text>
-      </div>
+        <div>
+          <text className='image'>그림1</text>
+        </div>
+      </button>
+      <button>
+        <div>
+          <text className='image'>그림2</text>
+        </div>
+      </button>
+      <button>
+        <div>
+          <text className='image'>그림3</text>
+        </div>
+      </button>
+      <button>
+        <div>
+          <text className='image'>그림4</text>
+        </div>
       </button>
     </div>
   );

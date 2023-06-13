@@ -1,12 +1,13 @@
 import React, { useState, useRef } from 'react';
 import Picture from './Picture';
 import Word from './Word';
+import CalendarPage from './CalendarPage';
 import '../../../assets/css/modal.css';
-import App from "../../../App";
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
 
-const Read = (props) => {
+const Search = (props) => {
+  // counts of diaries
+  const count = 4;
+
   // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
   const { open, close, header } = props;
   /* rendering each parts */
@@ -14,11 +15,14 @@ const Read = (props) => {
   const wordBtn = useRef(null);
   const calendarBtn = useRef(null);
 
+  const mainRef = useRef(null);
+
   const OnPictureBtnClick = () => {
     pictureBtn.current.style.display = 'block';
     wordBtn.current.style.display = 'none';
     calendarBtn.current.style.display = 'none';
-    console.log("picture btn clicked");
+    let value = mainRef.current;
+    console.log("mainRef : " + value);
   }
 
   const OnWordBtnClick = () => {
@@ -35,15 +39,12 @@ const Read = (props) => {
     console.log("calender btn clicked");
   }
 
-  const [value, onChange] = useState(new Date());
-
   return (
     // 모달이 열릴때 openModal 클래스가 생성된다.
     <div className={open ? 'openModal modal' : 'modal'}>
       {open ? (
         <section>
           <header>
-            {/* {header} */}
             <div>
                 <button className='picture' onClick={OnPictureBtnClick}><img src='./img/picture.png' width={25} height={25}></img></button>
                 <button className='picture' onClick={OnWordBtnClick}><img src='./img/word.png' width={25} height={25}></img></button>
@@ -54,65 +55,19 @@ const Read = (props) => {
             </div>
           </header>
 
-          <main>
-            <div id='show_titles' ref={wordBtn}>
-              <button>
-                <div>
-                  <text className='titleTxt'>2023년 4월 14일 일기</text>
-                  <text className='dateTxt'>2023/04/14</text>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <text className='titleTxt'>2023년 4월 14일 일기</text>
-                  <text className='dateTxt'>2023/04/14</text>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <text className='titleTxt'>2023년 4월 14일 일기</text>
-                  <text className='dateTxt'>2023/04/14</text>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <text className='titleTxt'>2023년 4월 14일 일기</text>
-                  <text className='dateTxt'>2023/04/14</text>
-                </div>
-              </button>
+          <main ref={mainRef}>
+            <div ref={pictureBtn}>
+              <Picture count={count} />
             </div>
-
-            <div id='show_pictures'  ref={pictureBtn}>
-              <button>
-                <div>
-                  <text className='image'>그림1</text>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <text className='image'>그림2</text>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <text className='image'>그림3</text>
-                </div>
-              </button>
-              <button>
-                <div>
-                  <text className='image'>그림4</text>
-                </div>
-              </button>
+            <div ref={wordBtn}>
+              <Word />
             </div>
-          <div id='show_calendar'  ref={calendarBtn}>
-              <Calendar onChange={onChange} value={value}/>
+            <div ref={calendarBtn}>
+              <CalendarPage />
             </div>
           </main>
 
           <footer>
-            {/* <button className="close" onClick={close}>
-              close
-            </button> */}
           </footer>
         </section>
       ) : null}
@@ -120,4 +75,4 @@ const Read = (props) => {
   );
 };
 
-export default Read;
+export default Search;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Read from '../commons/components/Modals/Modal';
+import Search from '../commons/components/Modals/Search';
 
 const Footer = (props) => {
   const { setIsWrite } = props;
@@ -15,8 +15,8 @@ const Footer = (props) => {
 
   return (
     <div className="footer">
-      <Read open={modalOpen} close={closeModal}>
-      </Read>
+      <Search open={modalOpen} close={closeModal}>
+      </Search>
       <img
         className="write"
         src="./img/펜.png"
