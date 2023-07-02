@@ -1,8 +1,6 @@
-import { React,  useState, useRef } from 'react';
-import { useInView } from "react-intersection-observer"
+import { React,  useState, useRef, useEffect } from 'react';
 import '../../../assets/css/modal.css';
-import { useInfiniteQuery } from '@tanstack/react-query';
-import InfiniteScroll from 'react-infinite-scroller';
+import {Link} from 'react-scroll/modules';
 
 const Word = (props) => {
 
@@ -17,7 +15,6 @@ const Word = (props) => {
     {title: "내용8", date: "2023/06/28"},
   ];
 
-  
 
   return(
     <div id='show_titles'>

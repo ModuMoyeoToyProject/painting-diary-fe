@@ -17,6 +17,7 @@ const Picture = (props) => {
         <button>
           <div>
             <text className='image'>{el.title}</text>
+            <text className='dateTxt'>{el.date}</text>
           </div>
         </button>
       ))}

@@ -89,7 +89,7 @@
     justify-content: baseline;
   }
   .modal > section > main #show_pictures > button {
-    width: 200px;
+    width: 190px;
     height: 200px;
     text-align: left;
     padding: 5%;
@@ -122,9 +122,13 @@
   /* START section id values */
   #show_titles {
     display: block;
+    height: 50vh;
+    overflow-y: auto;
   }
   #show_pictures {
     display: block;
+    height: 50vh;
+    overflow-y: auto;
   }
   #show_calendar {
     display: block;
