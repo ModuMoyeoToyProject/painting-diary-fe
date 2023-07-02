@@ -1,0 +1,151 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .modal button {
+    outline: none;
+    cursor: pointer;
+    border: 0;
+  }
+  .modal > section {
+    width: 90%;
+    height: 70%;
+    max-width: 450px;
+    margin: 0 auto;
+    border-radius: 0.3rem;
+    background-color: #fff;
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-show 0.3s;
+    overflow: hidden;
+  }
+  .modal > section > header {
+    position: relative;
+    padding: 16px 64px 16px 16px;
+    /* background-color: #f1f1f1; */
+    font-weight: 700;
+  }
+  /* START top buttons */
+  .modal > section > header .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+    color: #000000;
+    background-color: transparent;
+  }
+  .picture {
+    font-size: 25px;
+    color: #000000;
+    background-color: transparent;
+  }
+  .searchBtn {
+    font-size: 25px;
+    color: #000000;
+    background-color: transparent;
+    float: right;
+  }
+  /* END top buttons */
+  /* START top search bar */
+  .searchBar{
+    font-size: 16px;
+    color: #000000;
+    background-color: transparent;
+    float: right;
+  }
+  /* END top search bar */
+  .modal > section > main {
+    padding: 16px;
+    align-items: center;
+    /* border-bottom: 1px solid #dee2e6; */
+    /* border-top: 1px solid #dee2e6; */
+  }
+  /* START each elements in searched list*/
+  .modal > section > main > div{
+    display: block;
+  }
+  .modal > section > main #show_titles > button {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    padding: 5%;
+    margin: 1% 0% 1% 0%;
+  }
+  .titleTxt {
+    display: block;
+    float: left;
+  }
+  .dateTxt {
+    display: block;
+    float: right;
+    justify-content: baseline;
+  }
+  .modal > section > main #show_pictures > button {
+    width: 200px;
+    height: 200px;
+    text-align: left;
+    padding: 5%;
+    margin: 1%;
+  }
+  .image {
+    display: block;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+  }
+  /*END  each elements in searched list*/
+  .modal > section > footer {
+    padding: 12px 16px;
+    text-align: right;
+  }
+  .modal > section > footer button {
+    padding: 6px 12px;
+    color: #fff;
+    background-color: #6c757d;
+    border-radius: 5px;
+    font-size: 13px;
+  }
+  .modal.openModal {
+    display: flex;
+    align-items: center;
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-bg-show 0.3s;
+  }
+  /* START section id values */
+  #show_titles {
+    display: block;
+  }
+  #show_pictures {
+    display: block;
+  }
+  #show_calendar {
+    display: block;
+  }
+  /* END section id values */
+  
+  @keyframes modal-show {
+    from {
+      opacity: 0;
+      margin-top: -50px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+  @keyframes modal-bg-show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
